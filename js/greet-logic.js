@@ -1,7 +1,9 @@
 function GreetF(){
 
   var personname = '' ;
-  var greetName = '' ;
+  // var greetName = '' ;
+  var greetCounter= 0 ;
+
 
 
 function Greet(names,language) {
@@ -19,7 +21,16 @@ function Greet(names,language) {
  if (language === 'Afri') {
     greetName = 'Halo, ' + names;
     }
+
+
 }
+function countName() {
+ //Object.keys(greetCounter).length;
+  return  greetCounter++;
+
+}
+
+
 
 //
 function GetName() {
@@ -27,8 +38,10 @@ function GetName() {
 }
 
 return {
+      GreetF,
       Greet,
-      GetName
-
+      GetName,
+      countName
 }
 }
+var factoryF= GreetF()
