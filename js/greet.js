@@ -33,7 +33,7 @@ function clickBtn() {
 
     }
     if (name === '') {
-      return output.innerHTML = 'PLEASE ENTER YOU NAMER ' ;
+      return output.innerHTML = 'PLEASE ENTER YOUR NAME ' ;
 
     }
     if (!language) {
