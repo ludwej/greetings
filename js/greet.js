@@ -32,12 +32,12 @@ function clickBtn() {
 
 
     }
-    if (name === '') {
+    if (name != '') {
       return output.innerHTML = 'PLEASE ENTER YOU NAMER ' ;
 
     }
     if (!language) {
-        return output.innerHTML = 'PLEASE CHECK LANGUAGE '
+        return output.innerHTML = 'PLEASE CHECK LANGUAGE ' ;
 
     }
 }
