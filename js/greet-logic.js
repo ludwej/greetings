@@ -1,47 +1,51 @@
-function GreetF(){
+function GreetF(storedNames) {
 
-  var personname = '' ;
-  // var greetName = '' ;
-  var greetCounter= 0 ;
+  var stored = storedNames || {} ;
+  var nameGreeted = ''
+//  var getLocal = JSON.parse(localStorage.getItem('stored'));
 
+  function greetFunction(language,name) {
 
+    if(name != ''){
+      nameGreeted = name
+      if (stored[nameGreeted]=== undefined) {
+        stored[nameGreeted] = 0;
 
-function Greet(names,language) {
-
-    if (names != '') {
-      personname=names;
-  }
-  if (language === 'Eng' ) {
-        greetName = 'Hello, ' + names ;
+      //  localStorage.setItem('stored',JSON.stringify({}));
       }
 
-   if (language === 'Xho' ) {
-      greetName= 'Molo, ' + names ;
-      }
- if (language === 'Afri') {
-    greetName = 'Halo, ' + names;
     }
 
+    if (language === 'Eng' ) {
+          return 'Hello, ' + name ;
+        }
 
-}
-function countName() {
- //Object.keys(greetCounter).length;
-  return  greetCounter++;
+     if (language === 'Xho' ) {
+        return 'Molo, ' + name ;
+        }
+    if (language === 'Afri') {
+      return 'Halo, ' + name;
+      }
 
-}
+  }
 
 
+  function countLocal() {
 
-//
-function GetName() {
-  return greetName;
-}
+      return  Object.keys(stored).length ;
+
+  }
+
+
+  function returnNamesLocal() {
+    return stored;
+
+  }
+
 
 return {
-      GreetF,
-      Greet,
-      GetName,
-      countName
+  greetFunction,
+  countLocal,
+  returnNamesLocal
 }
 }
-var factoryF= GreetF()

@@ -5,22 +5,29 @@
  var output = document.querySelector ('.output');
  var peopleCount = document.querySelector('.peopleCount');
 
+ var factoryF = GreetF() ;
 
+function clickBtn() {
+    var name = text.value ;
+    var checkedRBTN = document.querySelector("input[name='languageType']:checked");
 
+    if (checkedRBTN){
+      var language = checkedRBTN.value;
+     var dispayText = '' ;
+      var displayOutput = factoryF.greetFunction(language,name);
+      var displayCounter = factoryF.countLocal();
 
-function dom(pName) {
-  var checkLanguage = document.querySelector("input[name=languageType]:checked");
-    if (checkLanguage) {
-    var  names=text.value;
-    var language= checkLanguage.value;
-    factoryF.Greet(names,language);
-    output.innerHTML = factoryF.GetName();
-    peopleCount.innerHTML=factoryF.countName();
+      //textB.innerHTML = '' ;
+      output.innerHTML = displayOutput ;
+      peopleCount.innerHTML = displayCounter ;
+      console.log(factoryF.returnNamesLocal())
 
+    }
+    else {
+      output.innerHTML =  '' ;
+      peopleCount.innerHTML =  '';
     }
 }
 
 
-
-
-GreetBtn.addEventListener('click', dom);
+GreetBtn.addEventListener('click', clickBtn);
