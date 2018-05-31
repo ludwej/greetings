@@ -32,7 +32,7 @@ function clickBtn() {
 
 
     }
-    if (name != '') {
+    if (name === '') {
       return output.innerHTML = 'PLEASE ENTER YOU NAMER ' ;
 
     }
