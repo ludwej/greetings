@@ -13,6 +13,9 @@ var factoryF = GreetF(storedLocal) ;
 
 function clickBtn() {
     var name = text.value ;
+
+
+
     var checkedRBTN = document.querySelector("input[name='languageType']:checked");
 
     if (checkedRBTN){
@@ -28,12 +31,15 @@ function clickBtn() {
       localStorage.setItem('stored',JSON.stringify(factoryF.returnNamesLocal()))
 
 
+    }
+    if (name === '') {
+      return output.innerHTML = 'PLEASE ENTER YOU NAMER ' ;
 
     }
-    // else {
-    //   output.innerHTML =  '' ;
-    //   peopleCount.innerHTML =  '';
-    // }
+    if (!language) {
+        return output.innerHTML = 'PLEASE CHECK LANGUAGE '
+
+    }
 }
 GreetBtn.addEventListener('click', clickBtn);
 

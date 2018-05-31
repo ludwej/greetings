@@ -6,7 +6,7 @@ describe('Greetings', function(){
       var factoryF = GreetF()
 
     factoryF.greetFunction("Ludwe", 'Xho');
-    assert.equal(factoryF.greetFunction(),'Molo, Ludwe');
+    assert.equal(factoryF.nameGreeted(),'Molo, Ludwe');
     });
 
 
