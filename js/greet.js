@@ -5,7 +5,11 @@
  var output = document.querySelector ('.output');
  var peopleCount = document.querySelector('.peopleCount');
 
- var factoryF = GreetF() ;
+
+var storedLocal = JSON.parse(localStorage.getItem('stored'));
+
+
+var factoryF = GreetF(storedLocal) ;
 
 function clickBtn() {
     var name = text.value ;
@@ -21,13 +25,24 @@ function clickBtn() {
       output.innerHTML = displayOutput ;
       peopleCount.innerHTML = displayCounter ;
       console.log(factoryF.returnNamesLocal())
+      localStorage.setItem('stored',JSON.stringify(factoryF.returnNamesLocal()))
+
+
 
     }
-    else {
-      output.innerHTML =  '' ;
-      peopleCount.innerHTML =  '';
-    }
+    // else {
+    //   output.innerHTML =  '' ;
+    //   peopleCount.innerHTML =  '';
+    // }
 }
-
-
 GreetBtn.addEventListener('click', clickBtn);
+
+
+
+function clearBtn() {
+  localStorage.removeItem('stored');
+  output.innerHTML ='' ;
+
+
+}
+ResetBtn.addEventListener('click', clearBtn);

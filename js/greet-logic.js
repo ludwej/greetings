@@ -1,17 +1,17 @@
-function GreetF(storedNames) {
+function GreetF(storedLocal) {
 
-  var stored = storedNames || {} ;
-  var nameGreeted = ''
-//  var getLocal = JSON.parse(localStorage.getItem('stored'));
+  var stored = storedLocal || {} ;
+
+
 
   function greetFunction(language,name) {
 
     if(name != ''){
       nameGreeted = name
-      if (stored[nameGreeted]=== undefined) {
-        stored[nameGreeted] = 0;
+      if (stored[name]=== undefined) {
+        stored[name] =0;
 
-      //  localStorage.setItem('stored',JSON.stringify({}));
+
       }
 
     }
@@ -31,7 +31,6 @@ function GreetF(storedNames) {
 
 
   function countLocal() {
-
       return  Object.keys(stored).length ;
 
   }
