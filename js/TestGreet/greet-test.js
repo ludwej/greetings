@@ -6,7 +6,7 @@ describe('Greeting', function(){
     assert.equal(factoryF.greetFunction('Molo, Lihle'))
     });
 
-    it('should greet Lihle in Xhosa', function(){
+    it('should greet Lihle in English', function(){
       var factoryF = GreetF()
 
       factoryF.greetFunction("Lihle",'Eng');
@@ -15,7 +15,7 @@ describe('Greeting', function(){
 
 
 
-      it('should greet Lihle in Xhosa', function(){
+      it('should greet Lihle in Afrikaans', function(){
         var factoryF = GreetF()
 
         factoryF.greetFunction("Lihle",'Afri');
