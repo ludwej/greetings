@@ -25,7 +25,7 @@ function clickBtn() {
       var displayCounter = factoryF.countLocal();
 
       //textB.innerHTML = '' ;
-      output.innerHTML = displayOutput ;
+      output.innerHTML = displayOutput.toUpperCase() ;
       peopleCount.innerHTML = displayCounter ;
       console.log(factoryF.returnNamesLocal())
       localStorage.setItem('stored',JSON.stringify(factoryF.returnNamesLocal()))
