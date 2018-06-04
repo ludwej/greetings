@@ -10,7 +10,7 @@ describe('Greeting', function(){
       var factoryF = GreetF()
 
       factoryF.greetFunction("Lihle",'Eng');
-      assert.equal(factoryF.greetFunction('Molo, Lihle'))
+      assert.equal(factoryF.greetFunction('Hi, Lihle'))
       });
 
 

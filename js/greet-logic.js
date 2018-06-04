@@ -8,7 +8,7 @@ function GreetF(storedLocal) {
   function greetFunction(language,name) {
 
     if(name != ''){
-      nameGreeted = name
+      // nameGreeted = name
       if (stored[name]=== undefined) {
         stored[name] =0;
 
