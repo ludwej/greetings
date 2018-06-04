@@ -2,17 +2,18 @@ function GreetF(storedLocal) {
 
   var stored = storedLocal || {} ;
 
+  var greetCounter = 0
 
 
   function greetFunction(language,name) {
 
-    // if(name != ''){
-    //   nameGreeted = name
+    if(name != ''){
+      nameGreeted = name
       if (stored[name]=== undefined) {
         stored[name] =0;
 
 
-      // }
+      }
 
     }
 
