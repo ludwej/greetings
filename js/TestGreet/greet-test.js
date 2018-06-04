@@ -25,14 +25,37 @@ describe('Greeting', function(){
         assert.equal(factoryF.countLocal() , 3 )
         });
 
-        it('should count how many people greeted', function(){
+        it('count same person but in different Cases', function(){
           var factoryF = GreetF()
 
           factoryF.greetFunction("Ludwe",'Afri');
-          factoryF.greetFunction("ludwe",'Xho');
-          factoryF.greetFunction("Ludwe",'Eng');
+          factoryF.greetFunction("ludwe",'Afri');
+          factoryF.greetFunction("Ludwe",'Afri');
 
 
-          assert.equal(factoryF.countLocal(1))
+          assert.equal(factoryF.countLocal() , 1 )
         });
+        it('it should count different people', function(){
+          var factoryF = GreetF()
+
+          factoryF.greetFunction("Ludwe",'Afri');
+          factoryF.greetFunction("Ayanda",'Xho');
+          factoryF.greetFunction("Ayabongf",'Eng');
+
+
+          assert.equal(factoryF.countLocal() , 3 )
+        });
+        it('it should count different people', function(){
+          var factoryF = GreetF()
+
+          factoryF.greetFunction("Ludwe",'Afri');
+          factoryF.greetFunction("Ayanda",'Xho');
+          factoryF.greetFunction("Ayabongf",'Eng');
+
+
+          assert.equal(factoryF.countLocal() , 3 )
+        });
+
+
+
 });
