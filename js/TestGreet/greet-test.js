@@ -12,7 +12,12 @@ describe('Greeting', function(){
       factoryF.greetFunction("Lihle",'Eng');
       assert.equal(factoryF.greetFunction('Hi, Lihle'))
       });
+      it('should greet Lihle in Afrikaans', function(){
+        var factoryF = GreetF()
 
+        factoryF.greetFunction("Lihle",'Eng');
+        assert.equal(factoryF.greetFunction('Halo, Lihle'))
+        });
 
 
       it('should count how many people greeted', function(){
@@ -25,35 +30,28 @@ describe('Greeting', function(){
         assert.equal(factoryF.countLocal() , 3 )
         });
 
-        it('count same person but in different Cases', function(){
+        it('count same person but in Upper and Lowercase', function(){
           var factoryF = GreetF()
 
           factoryF.greetFunction("Ludwe",'Afri');
           factoryF.greetFunction("ludwe",'Afri');
-          factoryF.greetFunction("Ludwe",'Afri');
+          factoryF.greetFunction("LUDWE",'Afri');
 
 
           assert.equal(factoryF.countLocal() , 1 )
         });
-        it('it should count different people', function(){
+
+
+
+        it('it shouldnt count when no one has been greeted', function(){
           var factoryF = GreetF()
 
-          factoryF.greetFunction("Ludwe",'Afri');
-          factoryF.greetFunction("Ayanda",'Xho');
-          factoryF.greetFunction("Ayabongf",'Eng');
+          factoryF.greetFunction("",'');
+          factoryF.greetFunction("",'');
+          factoryF.greetFunction("",'');
 
 
-          assert.equal(factoryF.countLocal() , 3 )
-        });
-        it('it should count different people', function(){
-          var factoryF = GreetF()
-
-          factoryF.greetFunction("Ludwe",'Afri');
-          factoryF.greetFunction("Ayanda",'Xho');
-          factoryF.greetFunction("Ayabongf",'Eng');
-
-
-          assert.equal(factoryF.countLocal() , 3 )
+          assert.equal(factoryF.countLocal() ,0 )
         });
 
 

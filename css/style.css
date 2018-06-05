@@ -2,11 +2,14 @@
 body{
     background-color: grey ;
     align-content: center;
+    background-image: url('pictures/caryle-barton-56255-unsplash.jpg');
+
 }
 
 .container{
 
-  padding: 10px ;
+  background-image: url('pictures/caryle-barton-56255-unsplash.jpg');
+
   width: auto;
 
 }
